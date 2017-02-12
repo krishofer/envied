@@ -38,7 +38,7 @@ class ENVied::Coercer
 
   def self.supported_types
     @supported_types ||= begin
-      [:hash, :array, :time, :date, :symbol, :boolean, :integer, :string].sort
+      [:hash, :array, :time, :date, :symbol, :boolean, :integer, :string, :float].sort
     end
   end
 
