@@ -5,7 +5,8 @@ rvm:
   - 2.2.6
   - 2.3.3
   - 2.4.0
-  - jruby
+  - jruby-9.0.5.0
+  - jruby-head
 
 cache: bundler
 sudo: false
