@@ -339,6 +339,20 @@ describe ENVied do
           expect(ENVied.moar).to eq ['a',' b',' and, c']
         end
       end
+
+      describe 'URIable' do
+        before do
+          configure do
+            variable :site_url, :Uri
+          end.and_ENV('site_url' => 'https://www.google.com')
+          envied_require
+        end
+
+        it 'yields a URI from string' do
+          expect(ENVied.site_url).to be_a URI
+          expect(ENVied.site_url.host).to eq 'www.google.com'
+        end
+      end
     end
   end
 end
